@@ -638,60 +638,60 @@
 <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Pide Cita en Menos de 30 Segundos</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Completa los datos de tu vehículo y te confirmaremos el hueco en el box de manera inmediata.</p>
 </div>
-<form class="space-y-4" id="appointment-form" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.reset();">
+<form class="space-y-4" id="appointment-form">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <!-- Nombre -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Nombre completo *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: David García" required="" type="text"/>
+<input name="nombre" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: David García" required type="text"/>
 </div>
 <!-- Teléfono -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Teléfono de contacto *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: 612 34 56 78" required="" type="tel"/>
+<input name="telefono" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: 612 34 56 78" required type="tel"/>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <!-- Vehículo -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Marca y Modelo *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: Seat León 1.6 TDI" required="" type="text"/>
+<input name="vehiculo" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: Seat León 1.6 TDI" required type="text"/>
 </div>
 <!-- Matrícula -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Matrícula o Año (Opcional)</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical uppercase focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: 1234-LMN" type="text"/>
+<input name="matricula" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical uppercase focus:bg-surface-bright focus:outline-none transition-colors" placeholder="Ej: 1234-LMN" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <!-- Servicio -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Servicio principal *</label>
-<select class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" required="">
+<select name="servicio" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors" required>
 <option value="">Selecciona un servicio</option>
-<option value="mecanica">Mecánica General y Mantenimiento</option>
-<option value="itv">Preparación y Pase de ITV</option>
-<option value="frenos">Frenos y Suspensión</option>
-<option value="neumaticos">Neumáticos y Equilibrado</option>
-<option value="diagnosis">Electricidad y Diagnosis OBD</option>
-<option value="clima">Climatización / Carga A/A</option>
-<option value="otro">Otro / Diagnóstico de Avería</option>
+<option value="Mecánica General y Mantenimiento">Mecánica General y Mantenimiento</option>
+<option value="Preparación y Pase de ITV">Preparación y Pase de ITV</option>
+<option value="Frenos y Suspensión">Frenos y Suspensión</option>
+<option value="Neumáticos y Equilibrado">Neumáticos y Equilibrado</option>
+<option value="Electricidad y Diagnosis OBD">Electricidad y Diagnosis OBD</option>
+<option value="Climatización / Carga A/A">Climatización / Carga A/A</option>
+<option value="Otro / Diagnóstico de Avería">Otro / Diagnóstico de Avería</option>
 </select>
 </div>
 <!-- Fecha preferida -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Fecha preferida</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical focus:bg-surface-bright focus:outline-none transition-colors" type="date"/>
+<input name="fecha" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-technical text-label-technical focus:bg-surface-bright focus:outline-none transition-colors" type="date"/>
 </div>
 </div>
 <!-- Mensaje -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-technical text-label-technical text-on-surface uppercase">Describe la avería o síntoma (Opcional)</label>
-<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors resize-none" placeholder="Ej: Noto vibración al frenar a 90 km/h o suena un chirrido al girar a la izquierda..." rows="3"></textarea>
+<textarea name="averia" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:bg-surface-bright focus:outline-none transition-colors resize-none" placeholder="Ej: Noto vibración al frenar a 90 km/h o suena un chirrido al girar a la izquierda..." rows="3"></textarea>
 </div>
 <!-- RGPD Checkbox -->
 <div class="flex items-start gap-2.5 pt-2">
-<input class="mt-1 w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0" id="legal" required="" type="checkbox"/>
+<input class="mt-1 w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0" id="legal" required type="checkbox"/>
 <label class="font-body-sm text-body-sm text-on-surface-variant" for="legal">
                 Acepto el tratamiento de mis datos personales según la política de privacidad para la gestión del presupuesto y cita en taller.
               </label>
@@ -706,6 +706,44 @@
 <span class="material-symbols-outlined text-[24px]">task_alt</span>
 <span>¡Solicitud enviada! Nuestro recepcionista técnico te llamará en menos de 15 minutos para confirmar el box.</span>
 </div>
+<!-- Error notification -->
+<div class="hidden p-4 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-3" id="form-error">
+<span class="material-symbols-outlined text-[24px]">error</span>
+<span>No se ha podido enviar la solicitud. Llámanos al 963 89 21 44.</span>
+</div>
+</form>
+
+<script>
+document.getElementById('appointment-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = this;
+  const ok = document.getElementById('form-success');
+  const error = document.getElementById('form-error');
+  const boton = form.querySelector('button[type="submit"]');
+
+  ok.classList.add('hidden');
+  error.classList.add('hidden');
+  boton.disabled = true;
+
+  try {
+    const res = await fetch('/api/cita', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    });
+    const data = await res.json();
+    if (data.ok) {
+      ok.classList.remove('hidden');
+      form.reset();
+    } else {
+      error.classList.remove('hidden');
+    }
+  } catch (err) {
+    error.classList.remove('hidden');
+  }
+  boton.disabled = false;
+});
+</script>
 </form>
 </div>
 <!-- Right: Contacto Directo Inmediato -->
